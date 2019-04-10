@@ -355,14 +355,6 @@ App = {
           }
       });
 
-      contract.requestBool(function(err, result) {
-        if(!result) {
-            $(".request-to-sender").hide();
-        } else {
-            $(".request-to-sender").show();
-        }
-      });
-
       contract.enoughFund(function(err, result) {
         if(!result) {
             $(".with-draw").hide();
