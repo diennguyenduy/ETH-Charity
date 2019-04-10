@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Charity</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+        <link href="css/index.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+              <div class="col-xl-12 text-center">
+                <h1 id="page-tittle">
+                  Charity
+                  <i class="fas fa-hand-holding-heart" style="color:red;text-shadow:2px 2px 4px #000000;"></i>
+                </h1>
+
+                <hr /> 
+                <br>
+
+                <div class="container">
+                  <div class="row">
+
+                    <div class="col-md-4 text-center">
+                      <div class="card-counter time">
+                        <i class="fas fa-clock"></i>
+                        <span class="count-name">Hours remain</span>
+                        <span class="count-numbers" id="time-remain"></span>
+                       </div>
+                    </div>
+                  
+                    <div class="col-md-4 text-center">
+                      <div class="card-counter fund">
+                        <i class="fab fa-ethereum"></i>
+                        <span class="count-numbers" id="total-fund"></span>
+                        <span class="count-name">Total Fund</span>
+                      </div>
+                    </div>
+                  
+                    <div class="col-md-4 text-center">
+                      <div class="card-counter require-fund">
+                        <i class="fas fa-money-check-alt"></i>
+                        <span class="count-numbers" id="required-fund"></span>
+                        <span class="count-name">Required Fund</span>
+                      </div>
+                    </div>                
+                  </div>
+                </div>
+
+                <br>
+                <hr />                
+                <br>
+
+                <div class="row text-center">
+                  <h5>Địa chỉ người tạo : <span id="contract-owner"></span></h5>
+                </div>
+
+                <br>
+
+                <div class="row text-center">
+                  <h5>Địa chỉ người nhận: <span id="receiver-address"></span></h5>
+                </div>
+
+                <br>
+
+                <div class="row text-center">
+                  <h5>Địa chỉ của bạn: <span id='coinbase'></span></h5>
+                </div>
+                <br>
+
+                <div class="form-group">
+                    <label for="money">Số tiền ủng hộ (đơn vị 1 ETH):</label>
+                    <input type="text" class="form-control" id="money">
+                    <br>
+                    <button type="button" class="btn submit btn-success">Đồng ý</button>
+                    <span><button type="button" class="btn refund btn-danger">Rút tiền</button></span>
+                    <span><p id="refund-warning"></p></span>
+                </div>
+
+                <br>
+
+                <div class="with-draw">
+                  <span>Gửi yêu cầu để rút toàn bộ quỹ: 
+                    <button type="button" class="btn withdraw btn-warning">Xác nhận</button>
+                  </span>
+                </div>
+
+                <br>
+
+                <div class="col-md-4 text-center">
+                  <div class="request-to-sender">
+                    <p>Người nhận yêu cầu rút số tiền trong quỹ:</p>
+                    <span>
+                      <button type="button" class="btn ok-request btn-success">Đồng ý</button>
+                      <button type="button" class="btn cancel-request btn-danger">Từ chối</button>
+                    </span>
+                  </div>
+                </div>
+
+                <br>
+                <hr/>
+
+                <div class="row text-center">
+                  <h5>Danh sách các địa chỉ đã ủng hộ: </h5>
+                  <p id='total-senders'></p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/web3.min.js"></script>
+        <script src="js/App.js"></script>
+    </body>
+
+</html> 
